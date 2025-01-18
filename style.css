@@ -1,0 +1,403 @@
+@font-face{
+    font-family: 'HealthewebA';
+    src: url(font/Heal-The-Web-A.otf);
+}
+
+@font-face{
+    font-family: 'SF-Pro-Text-Medium';
+    src: url(font/SF-Pro-Text-Medium.otf);
+}
+
+@font-face{
+    font-family: 'SF-Pro-Text-Regular';
+    src: url(font/SF-Pro-Text-Regular.otf);
+}
+
+@font-face{
+    font-family: 'SF-Pro-Text-Light';
+    src: url(font/SF-Pro-Text-Light.otf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll; /* Forcer l'espace de la barre pour éviter le décalage */
+    scrollbar-width: none; /* Pour Firefox */
+}
+
+body::-webkit-scrollbar {
+    display: none; /* Pour Chrome, Safari et Edge */
+}
+
+body{
+    background-color: black;
+    font-family: 'SF-Pro-Text-Medium', sans-serif;
+    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+}
+
+fieldset{
+    border: white solid 1px;
+    background-color: white;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    background-color: black;
+    z-index: 2;
+}
+nav{
+    /*position: absolute;*/
+    /*top: 10%;*/
+    /*left: 5%;*/
+
+    /*background-color: aqua;*/
+    font-family: 'HealthewebA', serif;
+    margin-left: 0;
+    padding: 60px 20px 20px 40px;
+    display: flex;
+    gap: 25px;
+}
+.boutonNav{
+    text-decoration: none;
+    font-size: x-large;
+    color: white;
+    transition: color 0.3s ease; /* Transition fluide sur la couleur */
+}
+
+#boutonContactACC{
+    color: grey;
+    transition: color 0.5s;  ;
+}
+
+/*#boutonContactACC:hover{*/
+/*    color: white;*/
+/*}*/
+
+#boutonProfilACC{
+    color: grey;
+    transition: color 0.5s;  ;
+}
+
+/*#boutonProfilACC:hover{*/
+/*    color: white;*/
+/*}*/
+
+#boutonCompetenceACC{
+    color: grey;
+    transition: color 0.5s;  ;
+}
+
+/*#boutonCompetenceACC:hover{*/
+/*    color: white;*/
+/*}*/
+
+#logoGitHub{
+    height: 40px;
+    width: auto;
+    position: relative;
+    left: 830px;
+    bottom: 10px;
+    transition: opacity 0.5s;
+}
+#logoGitHub:hover{
+    opacity: 0.5;
+}
+/*toutes les image a modifier apres*/
+img{
+    width: 250px;
+    height: 250px;
+}
+#bataille{
+    color: black; /* Assurez-vous que le texte est visible quand il apparaît */
+    transition: color 0.5s;
+    font-size: large;
+    margin-left: 65Px;
+    position: relative;
+    top: 30px;
+}
+#jo{
+    color: black;
+    transition: color 0.5s; /* Transition fluide de 0.5 seconde */
+    position: relative;
+    top: 30px;
+}
+#suzanne{
+    color: black;
+    transition: color 0.5s ease; /* Transition fluide de 0.5 seconde */
+    font-size: large;
+    margin-left: 65Px;
+    position: relative;
+    top: 30px;
+}
+.projet{
+    background-color: lightgray;
+    width: 250px;
+    height: 250px;
+    border: 1px solid;
+}
+#projet1{
+    transition: transform .5s;
+}
+#projet1:hover{
+    transform: scale(1.1) ;
+}
+
+#projet2{
+    transition: transform .5s;
+}
+#projet2:hover{
+    transform: scale(1.1) ;
+}
+#projet3{
+    transition: transform .5s;
+}
+#projet3:hover{
+    transform: scale(1.1) ;
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+section{
+    margin-top: 200px;
+}
+
+
+#aboutText{
+    margin: 20px 70px 20px 80px;
+    font-size: large;
+    line-height: 1.5;
+    color: white;
+    font-family: 'SF-Pro-Text-Light', serif;
+    transition: color 0.5s;
+}
+
+#aboutTitle{
+    text-align: center;
+    transition: color 0.5s;
+    color: white;
+}
+
+#skills{
+    color: white;
+}
+#skillsTitle1{
+    text-align: center;
+}
+
+#skillsTitle2{
+    text-align: center;
+    position: relative;
+    top: 50px;
+}
+#IDETitle{
+    text-align: center;
+    position: relative;
+    top: 30px;
+}
+.skills{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+    justify-content: center;
+}
+
+footer {
+    margin-top: 100px;
+    text-align: center;
+    font-size: small;
+    padding-bottom: 15px;
+}
+
+footer span{
+    transition: color 0.5s;
+    color: grey;
+}
+
+footer span:hover{
+    transition: color 0.5s;
+    color: white;
+}
+
+/* Par défaut, les sections sont cachées */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+/* Lorsqu'elles deviennent visibles */
+.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#ProgSkills{
+    margin-top: 25px;
+}
+#ProgSkills2{
+    margin-top: 170px;
+}
+#OsSkills{
+    margin-top: 110px;
+}
+#IDESkills{
+    margin-top: 90px;
+}
+.imgSkills{
+    height: 175px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgJavaScript{
+    height: 135px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgC{
+    height: 135px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgWindows{
+    height: 135px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgLinux{
+    height: 135px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgBash{
+    height: 135px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgIntelliJ{
+    height: 125px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgWebstorm{
+    height: 125px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgvsCode{
+    height: 125px;
+    width: auto;
+    transition: transform .5s;
+}
+#imgcodeBlock{
+    height: 125px;
+    width: auto;
+    transition: transform .5s;
+}
+.imgSkills:hover{
+    transform: scale(1.1) ;
+}
+#java{
+    position: relative;
+    top: 40px;
+    right: 110px;
+}
+
+#html{
+    position: relative;
+    top: 40px;
+    right: 110px;
+}
+
+#css{
+    position: relative;
+    top: 40px;
+    right: 110px;
+}
+
+#psql{
+    position: relative;
+    top: 40px;
+    right: 110px;
+}
+
+#javaScript{
+    position: relative;
+    top: 40px;
+    right: 110px;
+}
+
+#bash{
+    position: relative;
+    top: 40px;
+    right: 85px;
+}
+
+#c{
+    position: relative;
+    top: 40px;
+    right: 70px;
+}
+#windows{
+    position: relative;
+    top: 40px;
+    right: 100px;
+}
+#linux{
+    position: relative;
+    top: 40px;
+    right: 79px;
+}
+#intelliJ{
+    position: relative;
+    top: 40px;
+    right: 83px;
+}
+#webStorm{
+    position: relative;
+    top: 50px;
+    right: 105px;
+}
+#vsCode{
+    position: relative;
+    top: 40px;
+    right: 95px;
+}
+#codeBlock{
+    position: relative;
+    top: 40px;
+    right: 115px;
+}
+/*#middle {*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+
+/*#bot{*/
+/*    position: absolute;*/
+/*    top: 50%;*/
+/*    transform: translateY(-50%);*/
+/*}*/
+h3{
+    top: 50px;
+}
+
+#os{
+    color: white;
+    margin-top: 90px;
+}
+#IDE{
+    color: white;
+    margin-top: 90px;
+}
