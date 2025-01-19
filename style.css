@@ -54,10 +54,13 @@ nav{
     /*top: 10%;*/
     /*left: 5%;*/
 
-    /*background-color: aqua;*/
-    font-family: 'HealthewebA', serif;
-    margin-left: 0;
-    padding: 60px 20px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 40px 20px;
+}
+
+.nav-links{
     display: flex;
     gap: 25px;
 }
@@ -65,7 +68,7 @@ nav{
     text-decoration: none;
     font-size: x-large;
     color: white;
-    transition: color 0.3s ease; /* Transition fluide sur la couleur */
+    transition: color 0.3s ease;
 }
 
 #boutonContactACC{
@@ -98,10 +101,8 @@ nav{
 #logoGitHub{
     height: 40px;
     width: auto;
-    position: relative;
-    left: 830px;
-    bottom: 10px;
     transition: opacity 0.5s;
+    margin-left: auto;
 }
 #logoGitHub:hover{
     opacity: 0.5;
