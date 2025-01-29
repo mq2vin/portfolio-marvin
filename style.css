@@ -207,12 +207,47 @@ section{
 }
 .skills{
     margin-top: 25px;
-    display: flex;
-    flex-direction: row;
-    gap: 100px;
-    justify-content: center;
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    /*gap: 100px;*/
+    /*justify-content: center;*/
 }
+.titreRubrique{
+    text-align: center;
+}
+.container-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    /*grid-gap: 20px;*/
+    grid-row-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 50px;
+}
+.box {
+    border-radius: 15px;
+    width: 130px;
+    height: 130px;
+    position: relative;
+    background-color: white;
+    margin: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    transition: transform .5s;
+}
+.image-box{
+    border-radius: 15px;
+    height: 110px;
+    width: 110px;
+    object-fit: cover;
+    justify-content: center;
 
+}
+.box:hover{
+    transform: scale(1.1);
+}
 footer {
     margin-top: 100px;
     text-align: center;
@@ -243,12 +278,15 @@ footer span:hover{
     transform: translateY(0);
 }
 
-#ProgSkills{
-    margin-top: 25px;
-}
-#ProgSkills2{
-    margin-top: 170px;
-}
+/*#ProgSkills{*/
+/*    margin-top: 25px;*/
+/*    display: flex;*/
+/*    justify-content: space-around;*/
+/*    gap: 30px;*/
+/*}*/
+/*.ProgSkills{*/
+
+/*}*/
 #OsSkills{
     margin-top: 110px;
 }
@@ -308,77 +346,7 @@ footer span:hover{
 .imgSkills:hover{
     transform: scale(1.1) ;
 }
-#java{
-    position: relative;
-    top: 40px;
-    right: 110px;
-}
 
-#html{
-    position: relative;
-    top: 40px;
-    right: 110px;
-}
-
-#css{
-    position: relative;
-    top: 40px;
-    right: 110px;
-}
-
-#psql{
-    position: relative;
-    top: 40px;
-    right: 110px;
-}
-
-#javaScript{
-    position: relative;
-    top: 40px;
-    right: 110px;
-}
-
-#bash{
-    position: relative;
-    top: 40px;
-    right: 85px;
-}
-
-#c{
-    position: relative;
-    top: 40px;
-    right: 70px;
-}
-#windows{
-    position: relative;
-    top: 40px;
-    right: 100px;
-}
-#linux{
-    position: relative;
-    top: 40px;
-    right: 79px;
-}
-#intelliJ{
-    position: relative;
-    top: 40px;
-    right: 83px;
-}
-#webStorm{
-    position: relative;
-    top: 50px;
-    right: 105px;
-}
-#vsCode{
-    position: relative;
-    top: 40px;
-    right: 95px;
-}
-#codeBlock{
-    position: relative;
-    top: 40px;
-    right: 115px;
-}
 /*#middle {*/
 /*    position: absolute;*/
 /*    top: 50%;*/
