@@ -167,3 +167,37 @@ const aboutText = document.querySelector("#aboutText");
         skillsPosition.scrollIntoView({ behavior: "smooth" }); // Active le scroll fluide
     });
 
+(function () {
+    const marvin = document.getElementById("marvin");
+    const transitions = ["Marvin", "Virman", "Mirvan", "Marvin"];
+    let now = 0;
+    let timeout = null;
+    const speed = 100; // Délai en millisecondes (ajuste cette valeur pour ralentir ou accélérer)
+
+    // Fonction pour gérer la transition
+    const transform = (step, end) => {
+        if (timeout) {
+            clearTimeout(timeout);
+            timeout = null;
+        }
+
+        now += step;
+        if (now >= 0 && now < transitions.length) {
+            marvin.style.opacity = 0; // Fait disparaître le texte
+            setTimeout(() => {
+                marvin.textContent = transitions[now];
+                marvin.style.opacity = 1; // Fait réapparaître le texte
+            }, speed / 2); // Délai pour la transition (moitié du délai total)
+        }
+
+        if ((step > 0 && now < end) || (step < 0 && now > end)) {
+            timeout = setTimeout(() => transform(step, end), speed);
+        }
+    };
+
+    // Déclenche l'animation au survol
+    marvin.onmouseenter = () => transform(1, transitions.length - 1);
+
+    // Déclenche l'animation inverse quand la souris quitte
+    marvin.onmouseleave = () => transform(-1, 0);
+})();

@@ -235,7 +235,7 @@ section{
     align-items: center;
     justify-content: space-around;
     display: flex;
-    transition: transform .5s;
+    transition: transform .3s;
 }
 .image-box{
     border-radius: 15px;
@@ -243,7 +243,10 @@ section{
     width: 110px;
     object-fit: cover;
     justify-content: center;
-
+    transition: transform .5s;
+}
+.image-box:hover{
+    transform: scale(1.1);
 }
 .box:hover{
     transform: scale(1.1);
@@ -369,4 +372,8 @@ h3{
 #IDE{
     color: white;
     margin-top: 90px;
+}
+
+#marvin {
+    transition: opacity 0.3s ease;
 }
