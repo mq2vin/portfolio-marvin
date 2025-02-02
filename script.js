@@ -11,38 +11,9 @@ const lienProfilAccueil = document.getElementById("boutonProfilACC");
 const lienCompetencesAccueil = document.getElementById("boutonCompetenceACC");
 
 
-const Page = window.location.pathname;
-console.log("Chemin de la page actuelle :", Page);
-
-
-
-
 const about = document.querySelector("#about");
-const aboutTitle = document.querySelector("#aboutTitle");
-const aboutText = document.querySelector("#aboutText");
-
-// sur page accueil
-
-
-    // lienProfilAccueil.addEventListener("mouseover", () => {
-    //     lienProjetAccueil.style.transition = "color 0.5s";
-    //     lienProjetAccueil.style.color = "grey";
-    // })
-    // lienProfilAccueil.addEventListener("mouseout", () => {
-    //     lienProjetAccueil.style.transition = "color 0.5s";
-    //     lienProjetAccueil.style.color = "white";
-    // })
-    // lienCompetencesAccueil.addEventListener("mouseover", () => {
-    //     lienProjetAccueil.style.transition = "color 0.5s";
-    //     lienProjetAccueil.style.color = "grey";
-    // })
-    // lienCompetencesAccueil.addEventListener("mouseout", () => {
-    //     lienProjetAccueil.style.transition = "color 0.5s";
-    //     lienProjetAccueil.style.color = "white";
-    // })
 
     window.addEventListener("scroll", () => {
-        console.log(scrollY)
         const sections = {
             projets: 0, // Position du haut de la page
             about: document.querySelector("#about").offsetTop, // Position de la section "Qui suis-je ?"
@@ -78,39 +49,31 @@ const aboutText = document.querySelector("#aboutText");
         about.style.color = "black";
     }
 
-// document.getElementById("projet1").innerHTML = projet1;
-
     projet1.addEventListener("mouseover", () => {
-        console.log("toucher");
         spanBataille.style.color = "white";
     });
 
     projet1.addEventListener("mouseout", () => {
-        console.log("dehors");
         spanBataille.style.transition = "color 0.5s";
         spanBataille.style.color = "black";
     });
 
 
     projet2.addEventListener("mouseover", () => {
-        console.log("toucher");
         spanJo.style.color = "white";
     });
 
     projet2.addEventListener("mouseout", () => {
-        console.log("dehors");
         spanJo.style.transition = "color 0.5s";
         spanJo.style.color = "black";
     });
 
 
     projet3.addEventListener("mouseover", () => {
-        console.log("toucher");
         spanSuzanne.style.color = "white";
     });
 
     projet3.addEventListener("mouseout", () => {
-        console.log("dehors");
         spanSuzanne.style.transition = "color 0.5s";
         spanSuzanne.style.color = "black";
     });
@@ -147,14 +110,7 @@ const aboutText = document.querySelector("#aboutText");
         const middlePosition = document.querySelector("#middle"); // Cible la section Profil
         middlePosition.scrollIntoView({ behavior: "smooth" }); // Active le scroll fluide
     });
-    // document.getElementById("boutonProfilACC").addEventListener("click", (event) => {
-    //     event.preventDefault(); // Empêche le comportement par défaut du lien
-    //     const middlePosition = window.innerHeight / 2; // Positionner au milieu
-    //     window.scrollTo({
-    //         top: middlePosition,
-    //         behavior: "smooth"
-    //     });
-    // });
+
 
     document.getElementById("boutonCompetenceACC").addEventListener("click", (event) => {
         event.preventDefault(); // Empêche le comportement par défaut du lien
