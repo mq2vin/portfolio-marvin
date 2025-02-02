@@ -50,9 +50,6 @@ header{
     z-index: 2;
 }
 nav{
-    /*position: absolute;*/
-    /*top: 10%;*/
-    /*left: 5%;*/
 
     display: flex;
     justify-content: space-between;
@@ -76,27 +73,16 @@ nav{
     transition: color 0.5s;  ;
 }
 
-/*#boutonContactACC:hover{*/
-/*    color: white;*/
-/*}*/
 
 #boutonProfilACC{
     color: grey;
     transition: color 0.5s;  ;
 }
 
-/*#boutonProfilACC:hover{*/
-/*    color: white;*/
-/*}*/
-
 #boutonCompetenceACC{
     color: grey;
     transition: color 0.5s;  ;
 }
-
-/*#boutonCompetenceACC:hover{*/
-/*    color: white;*/
-/*}*/
 
 #logoGitHub{
     height: 40px;
@@ -207,10 +193,6 @@ section{
 }
 .skills{
     margin-top: 25px;
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*gap: 100px;*/
-    /*justify-content: center;*/
 }
 .titreRubrique{
     text-align: center;
@@ -218,7 +200,6 @@ section{
 .container-box {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    /*grid-gap: 20px;*/
     grid-row-gap: 40px;
     align-items: center;
     justify-items: center;
@@ -268,99 +249,19 @@ footer span:hover{
     color: white;
 }
 
-/* Par défaut, les sections sont cachées */
+/*animation des sections*/
 .hidden {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/* Lorsqu'elles deviennent visibles */
+/*animation des sections*/
 .visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/*#ProgSkills{*/
-/*    margin-top: 25px;*/
-/*    display: flex;*/
-/*    justify-content: space-around;*/
-/*    gap: 30px;*/
-/*}*/
-/*.ProgSkills{*/
-
-/*}*/
-#OsSkills{
-    margin-top: 110px;
-}
-#IDESkills{
-    margin-top: 90px;
-}
-.imgSkills{
-    height: 175px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgJavaScript{
-    height: 135px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgC{
-    height: 135px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgWindows{
-    height: 135px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgLinux{
-    height: 135px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgBash{
-    height: 135px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgIntelliJ{
-    height: 125px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgWebstorm{
-    height: 125px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgvsCode{
-    height: 125px;
-    width: auto;
-    transition: transform .5s;
-}
-#imgcodeBlock{
-    height: 125px;
-    width: auto;
-    transition: transform .5s;
-}
-.imgSkills:hover{
-    transform: scale(1.1) ;
-}
-
-/*#middle {*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*}*/
-
-/*#bot{*/
-/*    position: absolute;*/
-/*    top: 50%;*/
-/*    transform: translateY(-50%);*/
-/*}*/
 h3{
     top: 50px;
 }
