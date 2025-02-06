@@ -125,7 +125,7 @@ const about = document.querySelector("#about");
 
 (function () {
     const marvin = document.getElementById("marvin");
-    const transitions = ["Marvin", "Virman", "Mirvan", "Marvin"];
+    const transitions = ["Marvin", "Virman", "Mirvan", "marvin"];
     let now = 0;
     let timeout = null;
     const speed = 100; // Délai en millisecondes (ajuste cette valeur pour ralentir ou accélérer)
