@@ -98,7 +98,7 @@ const about = document.querySelector("#about");
         }, observerOptions);
 
         // Sélectionnez les sections à observer
-        const sections = document.querySelectorAll('#about, #skills, #os, #IDE');
+        const sections = document.querySelectorAll('#about, #skills, #frameworks, #os, #IDE');
         sections.forEach(section => {
             section.classList.add('hidden'); // Ajoutez la classe cachée initiale
             observer.observe(section);
