@@ -316,3 +316,16 @@ h3{
 #marvin {
     transition: opacity 0.3s ease;
 }
+#frameworks .container-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Si vous voulez centrer uniquement la boîte Angular */
+#frameworks .box.angular-box {
+    grid-column: span 2; /* Fait en sorte que la boîte Angular occupe deux colonnes */
+    justify-self: center; /* Centre la boîte Angular horizontalement */
+}
