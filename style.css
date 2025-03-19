@@ -24,18 +24,18 @@
 }
 
 html {
-    overflow-y: scroll; /* Forcer l'espace de la barre pour éviter le décalage */
-    scrollbar-width: none; /* Pour Firefox */
+    overflow-y: scroll;
+    scrollbar-width: none;
 }
 
 body::-webkit-scrollbar {
-    display: none; /* Pour Chrome, Safari et Edge */
+    display: none;
 }
 
 body{
     background-color: black;
     font-family: 'SF-Pro-Text-Medium', sans-serif;
-    -ms-overflow-style: none; /* Pour Internet Explorer et Edge */
+    -ms-overflow-style: none;
 }
 
 fieldset{
@@ -50,28 +50,16 @@ header{
     z-index: 2;
 }
 nav{
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 60px 40px 20px;
 }
 
-/*.nav-links{*/
-/*    display: flex;*/
-/*    gap: 25px;*/
-/*}*/
-/*.boutonNav{*/
-/*    text-decoration: none;*/
-/*    font-size: x-large;*/
-/*    color: white;*/
-/*    transition: color 0.3s ease;*/
-/*}*/
-
 .nav-links {
     display: flex;
-    align-items: center; /* Pour aligner verticalement */
-    gap: 20px; /* Espacement entre les éléments */
+    align-items: center;
+    gap: 20px;
 }
 
 .boutonNav {
@@ -101,7 +89,6 @@ nav{
 }
 
 #logoLinkedin{
-    /*border-radius: 10px;*/
     height: 35px;
     width: auto;
     transition: opacity 0.5s;
@@ -128,13 +115,10 @@ nav{
 #logoGitHub:hover{
     opacity: 0.5;
 }
-/*toutes les image a modifier apres*/
-img{
-    width: 250px;
-    height: 250px;
-}
+
+
 #bataille{
-    color: black; /* Assurez-vous que le texte est visible quand il apparaît */
+    color: black;
     transition: color 0.5s;
     font-size: large;
     margin-left: 65Px;
@@ -143,14 +127,37 @@ img{
 }
 #jo{
     color: black;
-    transition: color 0.5s; /* Transition fluide de 0.5 seconde */
+    transition: color 0.5s;
     position: relative;
     top: 30px;
 }
 #suzanne{
     color: black;
-    transition: color 0.5s ease; /* Transition fluide de 0.5 seconde */
+    transition: color 0.5s ease;
     font-size: large;
+    margin-left: 65Px;
+    position: relative;
+    top: 30px;
+}
+#Screen{
+    color: black;
+    transition: color 0.5s ease;
+    font-size: medium;
+    margin-left: 35Px;
+    position: relative;
+    top: 30px;
+}
+#VMbox{
+    color: black;
+    transition: color 0.5s ease;
+    font-size: medium;
+    position: relative;
+    top: 30px;
+}
+#portfolio{
+    color: black;
+    transition: color 0.5s ease;
+    font-size: medium;
     margin-left: 65Px;
     position: relative;
     top: 30px;
@@ -163,6 +170,8 @@ img{
 }
 #projet1{
     transition: transform .5s;
+    width: 250px;
+    height: 250px;
 }
 #projet1:hover{
     transform: scale(1.1) ;
@@ -170,14 +179,46 @@ img{
 
 #projet2{
     transition: transform .5s;
+    width: 250px;
+    height: 250px;
 }
 #projet2:hover{
     transform: scale(1.1) ;
+    width: 250px;
+    height: 250px;
 }
 #projet3{
     transition: transform .5s;
+    width: 250px;
+    height: 250px;
 }
 #projet3:hover{
+    transform: scale(1.1) ;
+}
+
+#projet4{
+    transition: transform .5s;
+    width: 250px;
+    height: 250px;
+}
+#projet4:hover{
+    transform: scale(1.1) ;
+}
+
+#projet5{
+    transition: transform .5s;
+    width: 250px;
+    height: 250px;
+}
+#projet5:hover{
+    transform: scale(1.1) ;
+}
+#projet6{
+    transition: transform .5s;
+    width: 250px;
+    height: 250px;
+}
+#projet6:hover{
     transform: scale(1.1) ;
 }
 
@@ -284,14 +325,14 @@ footer span:hover{
     color: white;
 }
 
-/*animation des sections*/
+
 .hidden {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-/*animation des sections*/
+
 .visible {
     opacity: 1;
     transform: translateY(0);
@@ -316,6 +357,82 @@ h3{
 #marvin {
     transition: opacity 0.3s ease;
 }
+
+.projet-box {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-row-gap: 110px;
+    grid-column-gap: 100px;
+    align-items: center;
+    justify-items: center;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 3;
+}
+#modal.active {
+    opacity: 1;
+}
+#modal-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+#modal-content {
+    position: relative;
+    background: white;
+    padding: 40px;
+    z-index: 4;
+    border-radius: 10px;
+    text-align: center;
+    width: 60%;
+    max-width: 500px;
+    transform: translateY(-50px);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+#modal.active #modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+#modal-link{
+    text-decoration: none;
+    font-style: italic;
+    color: black;
+    opacity: 1;
+    transition: text-shadow 0.3s ease-in-out;
+}
+#modal-link:hover{
+    text-shadow: 1px 1px 2px grey;
+}
+#close-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 45px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: black;
+    padding: 0;
+    margin: 0;
+    transition: color 0.3s;
+}
+#close-btn:hover {
+    color: red;
+}
+
 #frameworks .container-box {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -324,8 +441,8 @@ h3{
     align-items: center;
 }
 
-/* Si vous voulez centrer uniquement la boîte Angular */
+
 #frameworks .box.angular-box {
-    grid-column: span 2; /* Fait en sorte que la boîte Angular occupe deux colonnes */
-    justify-self: center; /* Centre la boîte Angular horizontalement */
+    grid-column: span 2;
+    justify-self: center;
 }
