@@ -279,6 +279,10 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById("modal-link").innerHTML = `>🔗 Lien vers le site <`
                     document.getElementById("modal-link").href = data.link;
                 }
+                else{
+                    document.getElementById("modal-link").innerHTML = ``
+                    document.getElementById("modal-link").href = null;
+                }
                 console.log("Affichage de la modale !");
                 modal.style.display = "flex";
 
