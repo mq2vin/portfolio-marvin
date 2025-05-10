@@ -5,13 +5,15 @@
         <title>Mon Portfolio</title>
         <link rel="stylesheet" href="style.css">
         <link rel="icon" href="images/icon/icon3.webp">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     </head>
     <body>
         <header>
             <nav>
                 <div class="nav-links">
                     <a class="boutonNav" href="#top" id="boutonProjetACC">Projets</a>
-                    <a class="boutonNav" href="#middle" id="boutonProfilACC">Profil</a>
+                    <a class="boutonNav" href="#profilDiv" id="boutonProfilACC">Profil</a>
+                    <a class="boutonNav" href="#profilDiv" id="boutonParcoursACC">Parcours</a>
                     <a class="boutonNav" href="#bot" id="boutonCompetenceACC">Compétences</a>
                 </div>
                 <div class="nav-links">
@@ -61,7 +63,8 @@
                 </div>
             </section>
 
-            <div id="middle"></div>
+
+            <div id="profilDiv"></div>
             <section id="about">
                 <h1 id="aboutTitle">Qui suis-je ?</h1>
                 <p id="aboutText">
@@ -75,13 +78,36 @@
 
                     Merci de visiter mon portfolio, et n’hésitez pas à me contacter si vous avez des questions ou des projets à partager.
                 </p>
+            </section>
 
+            <div id="parcoursDiv"></div>
+            <section id="parcours">
+                <h1 class="titreRubrique">Parcours <br>Académique</h1>
+                <div class="parcoursBox">
+                    <div class="parcoursFormation">
+                        <h3 class="parcoursTitle">2020 - 2023</h3>
+                        <p class="parcoursText">Baccalauréat Scientifique Informatique</p>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <h4 class="titleEtablisement">Lycée Jean Renoir</h4>
+                    </div>
+                    <div class="parcoursFormation">
+                        <h3 class="parcoursTitle">2023 - 2024</h3>
+                        <p class="parcoursText">DCG</p>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <h4 class="titleEtablisement">Lycée Turgot</h4>
+                    </div>
+                    <div class="parcoursFormation">
+                        <h3 class="parcoursTitle">2024 - 2027</h3>
+                        <p class="parcoursText">BUT Informatique</p>
+                        <i class="fa fa-circle" aria-hidden="true"></i>
+                        <h4 class="titleEtablisement">IUT de Montreuil - Université Paris 8</h4>
+                    </div>
+                </div>
             </section>
 
             <div id="skillsSection"></div>
             <section id="skills" style="margin-left: 100px; margin-right: 100px;">
                 <h1 class="titreRubrique">Compétences <br>Informatique</h1>
-<!--                <h3 style="text-align: center; margin-top: 60px">Langage</h3>-->
                 <div class="container-box">
                     <div class="box">
                         <img style="" class="image-box" src="images/skills/html5-2.webp" alt="html">

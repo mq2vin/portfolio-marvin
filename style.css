@@ -88,6 +88,11 @@ nav{
     transition: color 0.5s;  ;
 }
 
+#boutonParcoursACC{
+    color: grey;
+    transition: color 0.5s;  ;
+}
+
 #logoLinkedin{
     height: 35px;
     width: auto;
@@ -249,7 +254,9 @@ section{
     transition: color 0.5s;
     color: white;
 }
-
+#parcours{
+    color: white;
+}
 #skills{
     color: white;
 }
@@ -441,8 +448,40 @@ h3{
     align-items: center;
 }
 
-
 #frameworks .box.angular-box {
     grid-column: span 2;
     justify-self: center;
+}
+
+.parcoursBox{
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-row-gap: 40px;
+    align-items: center;
+    justify-items: center;
+    margin-top: 120px;
+}
+.parcoursFormation{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.parcoursTitle{
+    font-size: 1.3em;
+    font-weight: 300;
+    color: #636363;
+    margin-bottom: 15px;
+
+}
+.parcoursText{
+    font-size: 1.3em;
+    font-weight: 300;
+    margin-bottom: 15px;
+}
+
+.titleEtablisement{
+    color: gray;
+    font-weight: 400;
+    font-size: 1.2em;
 }

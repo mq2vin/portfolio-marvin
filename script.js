@@ -5,24 +5,18 @@ const projet4 = document.getElementById("projet4");
 const projet5 = document.getElementById("projet5");
 const projet6 = document.getElementById("projet6");
 
-const spanBataille = document.getElementById("bataille");
-const spanJo = document.getElementById("jo")
-const spanSuzanne = document.getElementById("suzanne");
-const spanScreenShot = document.getElementById("Screen")
-const spanVMbox = document.getElementById("VMbox")
-const spanPortfolio = document.getElementById("portfolio");
 
 const lienProjetAccueil = document.getElementById("boutonProjetACC");
 const lienProfilAccueil = document.getElementById("boutonProfilACC");
+const lienParcoursAccueil = document.getElementById("boutonParcoursACC");
 const lienCompetencesAccueil = document.getElementById("boutonCompetenceACC");
 
-
-const about = document.querySelector("#about");
 
     window.addEventListener("scroll", () => {
         const sections = {
             projets: 0, // Position du haut de la page
             about: document.querySelector("#about").offsetTop, // Position de la section "Qui suis-je ?"
+            parcours: document.querySelector("#parcours").offsetTop,
             competence: document.querySelector("#skills").offsetTop,
         };
 
@@ -31,85 +25,46 @@ const about = document.querySelector("#about");
         // Réinitialiser les couleurs
         lienProjetAccueil.style.color = "grey";
         lienProfilAccueil.style.color = "grey";
+        lienParcoursAccueil.style.color = "grey";
         lienCompetencesAccueil.style.color = "grey";
 
-        // Déterminer quelle section est visible
+        // Changer la couleur en fonction de la section visible
         if (currentScroll >= sections.competence) {
-            // Section "Compétences"
             lienCompetencesAccueil.style.color = "white";
+        } else if (currentScroll >= sections.parcours) {
+            lienParcoursAccueil.style.color = "white";
         } else if (currentScroll >= sections.about) {
-            // Section "Profil"
             lienProfilAccueil.style.color = "white";
-            aboutStyleAdd();
         } else {
-            // Section "Projets"
             lienProjetAccueil.style.color = "white";
-            aboutStyleRemove();
         }
-    });
 
-    function aboutStyleAdd(){
-        about.style.color = "white";
-    }
-    function aboutStyleRemove(){
-        about.style.color = "black";
-    }
-
-    projet1.addEventListener("mouseover", () => {
-        spanBataille.style.color = "white";
-    });
-
-    projet1.addEventListener("mouseout", () => {
-        spanBataille.style.transition = "color 0.5s";
-        spanBataille.style.color = "black";
     });
 
 
-    projet2.addEventListener("mouseover", () => {
-        spanJo.style.color = "white";
+    const projetsEtSpans = [
+        { imageId: "projet1", spanId: "bataille" },
+        { imageId: "projet2", spanId: "jo" },
+        { imageId: "projet3", spanId: "suzanne" },
+        { imageId: "projet4", spanId: "Screen" },
+        { imageId: "projet5", spanId: "VMbox" },
+        { imageId: "projet6", spanId: "portfolio" }
+    ];
+
+    projetsEtSpans.forEach(({ imageId, spanId }) => {
+        const image = document.getElementById(imageId);
+        const span = document.getElementById(spanId);
+
+        image.addEventListener("mouseover", () => {
+            span.style.color = "white";
+        });
+
+        image.addEventListener("mouseout", () => {
+            span.style.transition = "color 0.5s";
+            span.style.color = "black";
+        });
     });
 
-    projet2.addEventListener("mouseout", () => {
-        spanJo.style.transition = "color 0.5s";
-        spanJo.style.color = "black";
-    });
-
-
-    projet3.addEventListener("mouseover", () => {
-        spanSuzanne.style.color = "white";
-    });
-
-    projet3.addEventListener("mouseout", () => {
-        spanSuzanne.style.transition = "color 0.5s";
-        spanSuzanne.style.color = "black";
-    });
-
-    projet4.addEventListener("mouseover", () => {
-        spanScreenShot.style.color = "white";
-    });
-
-    projet4.addEventListener("mouseout", () => {
-        spanScreenShot.style.transition = "color 0.5s";
-        spanScreenShot.style.color = "black";
-    });
-
-    projet5.addEventListener("mouseover", () => {
-        spanVMbox.style.color = "white";
-    });
-
-    projet5.addEventListener("mouseout", () => {
-        spanVMbox.style.transition = "color 0.5s";
-        spanVMbox.style.color = "black";
-    });
-
-    projet6.addEventListener("mouseover", () => {
-        spanPortfolio.style.color = "white";
-    });
-
-    projet6.addEventListener("mouseout", () => {
-        spanPortfolio.style.transition = "color 0.5s";
-        spanPortfolio.style.color = "black";
-    });
 
     document.getElementById("boutonProjetACC").addEventListener("click", (event) => {
         event.preventDefault();
@@ -131,7 +86,7 @@ const about = document.querySelector("#about");
         }, observerOptions);
 
 
-        const sections = document.querySelectorAll('#about, #skills, #frameworks, #os, #IDE');
+        const sections = document.querySelectorAll('#about, #parcours, #skills, #frameworks, #os, #IDE');
         sections.forEach(section => {
             section.classList.add('hidden');
             observer.observe(section);
@@ -140,15 +95,15 @@ const about = document.querySelector("#about");
 
     document.getElementById("boutonProfilACC").addEventListener("click", (event) => {
         event.preventDefault();
-        const middlePosition = document.querySelector("#middle");
-        middlePosition.scrollIntoView({ behavior: "smooth" });
+        const profilDivPosition = document.querySelector("#profilDiv");
+        profilDivPosition.scrollIntoView({ behavior: "smooth" });
     });
 
 
-    document.getElementById("boutonCompetenceACC").addEventListener("click", (event) => {
+    document.getElementById("boutonParcoursACC").addEventListener("click", (event) => {
         event.preventDefault();
-        const middlePosition = document.querySelector("#middle");
-        middlePosition.scrollIntoView({ behavior: "smooth" });
+        const parcourlDivPosition = document.querySelector("#parcoursDiv");
+        parcourlDivPosition.scrollIntoView({ behavior: "smooth" });
     });
     document.getElementById("boutonCompetenceACC").addEventListener("click", (event) => {
         event.preventDefault();
@@ -171,10 +126,10 @@ const about = document.querySelector("#about");
 
         now += step;
         if (now >= 0 && now < transitions.length) {
-            marvin.style.opacity = 0;
+            marvin.style.opacity = "0";
             setTimeout(() => {
                 marvin.textContent = transitions[now];
-                marvin.style.opacity = 1;
+                marvin.style.opacity = "1";
             }, speed / 2);
         }
 
