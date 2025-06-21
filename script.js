@@ -4,6 +4,7 @@ const projet3 = document.getElementById("projet3");
 const projet4 = document.getElementById("projet4");
 const projet5 = document.getElementById("projet5");
 const projet6 = document.getElementById("projet6");
+const projet7 = document.getElementById("projet7");
 
 
 const lienProjetAccueil = document.getElementById("boutonProjetACC");
@@ -22,13 +23,11 @@ const lienCompetencesAccueil = document.getElementById("boutonCompetenceACC");
 
         const currentScroll = window.scrollY + window.innerHeight / 2;
 
-        // Réinitialiser les couleurs
         lienProjetAccueil.style.color = "grey";
         lienProfilAccueil.style.color = "grey";
         lienParcoursAccueil.style.color = "grey";
         lienCompetencesAccueil.style.color = "grey";
 
-        // Changer la couleur en fonction de la section visible
         if (currentScroll >= sections.competence) {
             lienCompetencesAccueil.style.color = "white";
         } else if (currentScroll >= sections.parcours) {
@@ -48,7 +47,8 @@ const lienCompetencesAccueil = document.getElementById("boutonCompetenceACC");
         { imageId: "projet3", spanId: "suzanne" },
         { imageId: "projet4", spanId: "Screen" },
         { imageId: "projet5", spanId: "VMbox" },
-        { imageId: "projet6", spanId: "portfolio" }
+        { imageId: "projet6", spanId: "portfolio" },
+        { imageId: "projet7", spanId: "LoT" }
     ];
 
     projetsEtSpans.forEach(({ imageId, spanId }) => {
@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     title: "ScreenShot Extension",
                     img: "images/projet/camera_white_bg.png",
                     description: "Extension simple pour capturer et enregistrer des pages Web au format PNG.",
-                    tech: "HTML, CSS, JavaScript, Chrome Extension API",
+                    tech: "HTML, CSS, JavaScript, HTML2canvas",
                     link: "https://github.com/mq2vin/ScreenShot-Extension"
                 },
                 VMbox: {
@@ -216,6 +216,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     description: "",
                     tech: "HTML, CSS, JavaScript, Git, CloudFlare Pages",
                     link: ""
+                },
+                LoT: {
+                    title: "Lost On Crampteus",
+                    img: "images/projet/lot.png",
+                    description: "Lost-on-Crampteus est un projet de groupe développé en Java avec JavaFX.\n " +
+                        "Ce jeu, inspiré de Terraria, met en pratique le modèle MVC (Modèle-Vue-Contrôleur) et les méthodologies agiles. Le projet s'est déroulé sur une durée de 6 semaines, divisées en 3 sprints.",
+                    tech: "Java, JavaFx, Git, JUnit, Trello",
+                    link: "https://github.com/mq2vin/LoT"
                 }
             };
 
@@ -230,7 +238,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     document.getElementById("modal-link").innerHTML = `> GitHub 🔗<`
                     document.getElementById("modal-link").href = data.link;
                 }
-                else if(projectId === "jo" || projectId === "suzanne"){
+                else if(projectId === "jo" || projectId === "suzanne" || projectId === "LoT"){
                     document.getElementById("modal-link").innerHTML = `>🔗 Lien vers le site <`
                     document.getElementById("modal-link").href = data.link;
                 }

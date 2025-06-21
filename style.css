@@ -121,7 +121,6 @@ nav{
     opacity: 0.5;
 }
 
-
 #bataille{
     color: black;
     transition: color 0.5s;
@@ -140,7 +139,7 @@ nav{
     color: black;
     transition: color 0.5s ease;
     font-size: large;
-    margin-left: 65Px;
+    margin-left: 60Px;
     position: relative;
     top: 30px;
 }
@@ -167,6 +166,16 @@ nav{
     position: relative;
     top: 30px;
 }
+
+#LoT{
+    color: black;
+    transition: color 0.5s ease;
+    font-size: medium;
+    margin-left: 60Px;
+    position: relative;
+    top: 30px;
+}
+
 .projet{
     background-color: lightgray;
     width: 250px;
@@ -226,6 +235,16 @@ nav{
 #projet6:hover{
     transform: scale(1.1) ;
 }
+
+#projet7{
+    transition: transform .5s;
+    width: 250px;
+    height: 250px;
+}
+#projet7:hover{
+    transform: scale(1.1) ;
+}
+
 
 .container{
     display: flex;
@@ -372,6 +391,10 @@ h3{
     grid-column-gap: 100px;
     align-items: center;
     justify-items: center;
+}
+
+.projet:nth-child(7) {
+    grid-column: 2; /* Place le 7ème élément dans la colonne du milieu */
 }
 
 #modal {
