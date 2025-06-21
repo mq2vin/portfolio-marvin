@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 LoT: {
                     title: "Lost On Crampteus",
-                    img: "images/projet/lot.png",
+                    img: "images/projet/LoT.png",
                     description: "Lost-on-Crampteus est un projet de groupe développé en Java avec JavaFX.\n " +
                         "Ce jeu, inspiré de Terraria, met en pratique le modèle MVC (Modèle-Vue-Contrôleur) et les méthodologies agiles. Le projet s'est déroulé sur une durée de 6 semaines, divisées en 3 sprints.",
                     tech: "Java, JavaFx, Git, JUnit, Trello",
