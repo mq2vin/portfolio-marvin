@@ -121,59 +121,28 @@ nav{
     opacity: 0.5;
 }
 
-#bataille{
-    color: black;
-    transition: color 0.5s;
-    font-size: large;
-    margin-left: 65Px;
-    position: relative;
-    top: 30px;
-}
-#jo{
-    color: black;
-    transition: color 0.5s;
-    position: relative;
-    top: 30px;
-}
-#suzanne{
+.projet span {
     color: black;
     transition: color 0.5s ease;
-    font-size: large;
-    margin-left: 60Px;
     position: relative;
     top: 30px;
-}
-#Screen{
-    color: black;
-    transition: color 0.5s ease;
     font-size: medium;
-    margin-left: 35Px;
-    position: relative;
-    top: 30px;
-}
-#VMbox{
-    color: black;
-    transition: color 0.5s ease;
-    font-size: medium;
-    position: relative;
-    top: 30px;
-}
-#portfolio{
-    color: black;
-    transition: color 0.5s ease;
-    font-size: medium;
-    margin-left: 65Px;
-    position: relative;
-    top: 30px;
 }
 
-#LoT{
-    color: black;
-    transition: color 0.5s ease;
-    font-size: medium;
-    margin-left: 60Px;
-    position: relative;
-    top: 30px;
+#bataille, #LoT, #suzanne, #portfolio {
+    margin-left: 60px;
+}
+
+#Screen {
+    margin-left: 35px;
+}
+
+#jo, #VMbox {
+    margin-left: 0;
+}
+
+#bataille, #suzanne {
+    font-size: large;
 }
 
 .projet{
@@ -182,69 +151,16 @@ nav{
     height: 250px;
     border: 1px solid;
 }
-#projet1{
+
+.projet img {
     transition: transform .5s;
     width: 250px;
     height: 250px;
-}
-#projet1:hover{
-    transform: scale(1.1) ;
 }
 
-#projet2{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
+.projet img:hover {
+    transform: scale(1.1);
 }
-#projet2:hover{
-    transform: scale(1.1) ;
-    width: 250px;
-    height: 250px;
-}
-#projet3{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
-}
-#projet3:hover{
-    transform: scale(1.1) ;
-}
-
-#projet4{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
-}
-#projet4:hover{
-    transform: scale(1.1) ;
-}
-
-#projet5{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
-}
-#projet5:hover{
-    transform: scale(1.1) ;
-}
-#projet6{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
-}
-#projet6:hover{
-    transform: scale(1.1) ;
-}
-
-#projet7{
-    transition: transform .5s;
-    width: 250px;
-    height: 250px;
-}
-#projet7:hover{
-    transform: scale(1.1) ;
-}
-
 
 .container{
     display: flex;
