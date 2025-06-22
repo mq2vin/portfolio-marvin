@@ -1,69 +1,48 @@
-const projet1 = document.getElementById("projet1");
-const projet2 = document.getElementById("projet2");
-const projet3 = document.getElementById("projet3");
-const projet4 = document.getElementById("projet4");
-const projet5 = document.getElementById("projet5");
-const projet6 = document.getElementById("projet6");
-const projet7 = document.getElementById("projet7");
+const navLinks = {
+    projet: document.getElementById("boutonProjetACC"),
+    profil: document.getElementById("boutonProfilACC"),
+    parcours: document.getElementById("boutonParcoursACC"),
+    competence: document.getElementById("boutonCompetenceACC")
+};
 
+window.addEventListener("scroll", () => {
+    const sections = {
+        projets: 0,
+        about: document.querySelector("#about").offsetTop,
+        parcours: document.querySelector("#parcours").offsetTop,
+        competence: document.querySelector("#skills").offsetTop,
+    };
 
-const lienProjetAccueil = document.getElementById("boutonProjetACC");
-const lienProfilAccueil = document.getElementById("boutonProfilACC");
-const lienParcoursAccueil = document.getElementById("boutonParcoursACC");
-const lienCompetencesAccueil = document.getElementById("boutonCompetenceACC");
+    const currentScroll = window.scrollY + window.innerHeight / 2;
 
-
-    window.addEventListener("scroll", () => {
-        const sections = {
-            projets: 0, // Position du haut de la page
-            about: document.querySelector("#about").offsetTop, // Position de la section "Qui suis-je ?"
-            parcours: document.querySelector("#parcours").offsetTop,
-            competence: document.querySelector("#skills").offsetTop,
-        };
-
-        const currentScroll = window.scrollY + window.innerHeight / 2;
-
-        lienProjetAccueil.style.color = "grey";
-        lienProfilAccueil.style.color = "grey";
-        lienParcoursAccueil.style.color = "grey";
-        lienCompetencesAccueil.style.color = "grey";
-
-        if (currentScroll >= sections.competence) {
-            lienCompetencesAccueil.style.color = "white";
-        } else if (currentScroll >= sections.parcours) {
-            lienParcoursAccueil.style.color = "white";
-        } else if (currentScroll >= sections.about) {
-            lienProfilAccueil.style.color = "white";
-        } else {
-            lienProjetAccueil.style.color = "white";
-        }
-
+    Object.values(navLinks).forEach(link => {
+        link.style.color = "grey";
     });
 
+    if (currentScroll >= sections.competence) {
+        navLinks.competence.style.color = "white";
+    } else if (currentScroll >= sections.parcours) {
+        navLinks.parcours.style.color = "white";
+    } else if (currentScroll >= sections.about) {
+        navLinks.profil.style.color = "white";
+    } else {
+        navLinks.projet.style.color = "white";
+    }
+});
 
-    const projetsEtSpans = [
-        { imageId: "projet1", spanId: "bataille" },
-        { imageId: "projet2", spanId: "jo" },
-        { imageId: "projet3", spanId: "suzanne" },
-        { imageId: "projet4", spanId: "Screen" },
-        { imageId: "projet5", spanId: "VMbox" },
-        { imageId: "projet6", spanId: "portfolio" },
-        { imageId: "projet7", spanId: "LoT" }
-    ];
+    document.querySelectorAll('.projet').forEach(projet => {
+        const span = projet.querySelector('span');
 
-    projetsEtSpans.forEach(({ imageId, spanId }) => {
-        const image = document.getElementById(imageId);
-        const span = document.getElementById(spanId);
-
-        image.addEventListener("mouseover", () => {
+        projet.querySelector('img').addEventListener('mouseover', () => {
             span.style.color = "white";
         });
 
-        image.addEventListener("mouseout", () => {
+        projet.querySelector('img').addEventListener('mouseout', () => {
             span.style.transition = "color 0.5s";
             span.style.color = "black";
         });
     });
+
 
 
     document.getElementById("boutonProjetACC").addEventListener("click", (event) => {
