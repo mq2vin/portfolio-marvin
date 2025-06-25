@@ -187,14 +187,13 @@ document.addEventListener("DOMContentLoaded", function () {
                         "configuration de plusieurs utilisateurs et installation de toutes les\n" +
                         "applications nécessaires",
                     tech: "Oracle VirtualBox, Linux Ubuntu Mate",
-                    link: ""
                 },
                 portfolio: {
                     title: "Mon Portfolio",
                     img: "images/icon/icon3.webp",
                     description: "",
                     tech: "HTML, CSS, JavaScript, Git, CloudFlare Pages",
-                    link: ""
+                    link: "https://github.com/mq2vin/portfolio-marvin"
                 },
                 LoT: {
                     title: "Lost On Crampteus",
@@ -213,18 +212,34 @@ document.addEventListener("DOMContentLoaded", function () {
                 document.getElementById("modal-image").src = data.img;
                 document.getElementById("modal-description").textContent = data.description;
                 document.getElementById("modal-tech").textContent = data.tech;
-                if(projectId === "bataille" || projectId === "Screen"){
-                    document.getElementById("modal-link").innerHTML = `> GitHub 🔗<`
-                    document.getElementById("modal-link").href = data.link;
+
+                const modalLink = document.getElementById("modal-link");
+
+                if (data.link) { // Si un lien existe
+                    modalLink.style.display = "inline-block";
+
+                    switch(projectId) {
+                        case "bataille":
+                        case "Screen":
+                        case "portfolio":
+                            modalLink.innerHTML = `> GitHub 🔗<`;
+                            break;
+
+                        case "jo":
+                        case "suzanne":
+                        case "LoT":
+                            modalLink.innerHTML = `>🔗 Lien vers le site <`;
+                            break;
+
+                        default:
+                            modalLink.innerHTML = `> Voir le projet <`;
+                    }
+
+                    modalLink.href = data.link;
+                } else {
+                    modalLink.style.display = "none";
                 }
-                else if(projectId === "jo" || projectId === "suzanne" || projectId === "LoT"){
-                    document.getElementById("modal-link").innerHTML = `>🔗 Lien vers le site <`
-                    document.getElementById("modal-link").href = data.link;
-                }
-                else{
-                    document.getElementById("modal-link").innerHTML = ``
-                    document.getElementById("modal-link").href = null;
-                }
+
                 console.log("Affichage de la modale !");
                 modal.style.display = "flex";
 

@@ -352,31 +352,72 @@ h3{
     transform: translateY(0);
     opacity: 1;
 }
-#modal-link{
+#modal-description {
+    margin-top: 20px;
+}
+#modal-link {
     text-decoration: none;
-    font-style: italic;
     color: black;
-    opacity: 1;
-    transition: text-shadow 0.3s ease-in-out;
+    background: #f0f0f0;
+    padding: 12px 25px;
+    border-radius: 15px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow:  8px 8px 15px #d9d9d9,
+    -8px -8px 15px #ffffff;
+    transition: all 0.3s ease;
+    font-style: normal;
+    font-weight: 500;
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
-#modal-link:hover{
-    text-shadow: 1px 1px 2px grey;
+
+#modal-link:hover {
+    box-shadow:  4px 4px 8px #d9d9d9,
+    -4px -4px 8px #ffffff;
+    transform: translateY(2px);
+    text-shadow: none;
 }
+
+#modal-link:active {
+    box-shadow: inset 4px 4px 8px #d9d9d9,
+    inset -4px -4px 8px #ffffff;
+    transform: translateY(2px);
+}
+
 #close-btn {
     position: absolute;
     top: 15px;
     right: 15px;
     font-size: 45px;
     cursor: pointer;
-    background: none;
+    background: #f0f0f0;
     border: none;
-    color: black;
-    padding: 0;
+    color: #333;
+    padding: 5px 5px 6px;
     margin: 0;
-    transition: color 0.3s;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow:  5px 5px 10px #d9d9d9,
+    -5px -5px 10px #ffffff;
+    transition: all 0.3s ease;
+    line-height: 1;
 }
+
 #close-btn:hover {
-    color: red;
+    color: #ff0000;
+    box-shadow:  2px 2px 5px #d9d9d9,
+    -2px -2px 5px #ffffff;
+    transform: translateY(2px);
+}
+
+#close-btn:active {
+    box-shadow: inset 3px 3px 6px #d9d9d9,
+    inset -3px -3px 6px #ffffff;
+    color: #cc0000;
 }
 
 #frameworks .container-box {
