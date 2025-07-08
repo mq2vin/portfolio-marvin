@@ -166,13 +166,6 @@ document.addEventListener("DOMContentLoaded", function () {
                     tech: "HTML, CSS, Git, CloudFlares Pages, Trello",
                     link: "https://olympic-game-2024-to-2028.pages.dev/"
                 },
-                suzanne: {
-                    title: "Suzanne Lenglen",
-                    img: "images/projet/suzanne.png",
-                    description: "Un site sur la célèbre joueuse de tennis Suzanne Lenglen.",
-                    tech: "HTML, CSS, Git, CloudFlares Pages",
-                    link: "https://suzanne-lenglen.pages.dev/"
-                },
                 Screen: {
                     title: "ScreenShot Extension",
                     img: "images/projet/camera_white_bg.png",
@@ -222,12 +215,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         case "bataille":
                         case "Screen":
                         case "portfolio":
+                        case "LoT":
                             modalLink.innerHTML = `> GitHub 🔗<`;
                             break;
-
                         case "jo":
-                        case "suzanne":
-                        case "LoT":
                             modalLink.innerHTML = `>🔗 Lien vers le site <`;
                             break;
 
