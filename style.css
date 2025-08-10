@@ -1,59 +1,24 @@
-/**
-* @license
-*
-* Font Family: Pally
-* Designed by: Indian Type Foundry
-* URL: https://www.fontshare.com/fonts/pally
-* © 2025 Indian Type Foundry
-*
-* Pally Regular
-* Pally Medium
-* Pally Bold
-* Pally Variable (Variable font)
+@font-face {
+    font-family: 'JetBrains-Mono-Regular';
+    src: url('font/jetBrainsMono/webfonts/JetBrainsMono-Regular.woff2') format('woff2');
+    font-weight: 200 500;
+    font-display: swap;
+    font-style: normal;
+}
 
-*
-*/
 @font-face {
-    font-family: 'Pally-Regular';
-    src: url('font/pally/Pally-Regular.woff2') format('woff2'),
-    url('font/pally/Pally-Regular.woff') format('woff'),
-    url('font/pally/Pally-Regular.ttf') format('truetype');
-    font-weight: 400;
+    font-family: 'JetBrains-Mono-Light';
+    src: url('font/jetBrainsMono/webfonts/JetBrainsMono-Light.woff2') format('woff2');
+    font-weight: 200 500;
     font-display: swap;
     font-style: normal;
 }
+
+
 @font-face {
-    font-family: 'Pally-Medium';
-    src: url('font/pally/Pally-Medium.woff2') format('woff2'),
-    url('font/pally/Pally-Medium.woff') format('woff'),
-    url('font/pally/Pally-Medium.ttf') format('truetype');
-    font-weight: 500;
-    font-display: swap;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'Pally-Bold';
-    src: url('font/pally/Pally-Bold.woff2') format('woff2'),
-    url('font/pally/Pally-Bold.woff') format('woff'),
-    url('font/pally/Pally-Bold.ttf') format('truetype');
-    font-weight: 700;
-    font-display: swap;
-    font-style: normal;
-}
-/**
-* This is a variable font
-* You can control variable axes as shown below:
-* font-variation-settings: wght 700.0;
-*
-* available axes:
-'wght' (range from 400.0 to 700.0
-*/
-@font-face {
-    font-family: 'Pally-Variable';
-    src: url('font/pally/Pally-Variable.woff2') format('woff2'),
-    url('font/pally/Pally-Variable.woff') format('woff'),
-    url('font/pally/Pally-Variable.ttf') format('truetype');
-    font-weight: 400 700;
+    font-family: 'JetBrains-Mono-Medium';
+    src: url('font/jetBrainsMono/webfonts/JetBrainsMono-Medium.woff2') format('woff2');
+    font-weight: 200 500;
     font-display: swap;
     font-style: normal;
 }
@@ -74,7 +39,7 @@ body::-webkit-scrollbar {
 
 body{
     background-color: black;
-    font-family: 'Pally-Regular', sans-serif;
+    font-family: 'JetBrains-Mono-Medium', sans-serif;
     -ms-overflow-style: none;
 }
 
@@ -217,10 +182,10 @@ section{
 
 #aboutText{
     margin: 20px 70px 20px 80px;
-    font-size: large;
+    font-size: medium;
     line-height: 1.5;
     color: white;
-    font-family: 'Pally-Variable', serif;
+    font-family: 'JetBrains-Mono-Medium', serif;
     transition: color 0.5s;
 }
 
@@ -394,6 +359,10 @@ h3{
 }
 #modal-description {
     margin-top: 20px;
+    font-size: 14px;
+}
+#modal-tech {
+    font-size: 14px;
 }
 #modal-link {
     text-decoration: none;

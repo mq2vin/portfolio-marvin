@@ -183,7 +183,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 },
                 portfolio: {
                     title: "Mon Portfolio",
-                    img: "images/icon/icon3.webp",
+                    img: "images/projet/icon3.webp",
                     description: "",
                     tech: "HTML, CSS, JavaScript, Git, CloudFlare Pages",
                     link: "https://github.com/mq2vin/portfolio-marvin"
