@@ -194,7 +194,7 @@ section{
     transition: color 0.5s;
     color: white;
 }
-#parcours{
+#parcours-academique, #parcours-pro{
     color: white;
 }
 #skills{
@@ -442,12 +442,19 @@ h3{
     justify-self: center;
 }
 
-.parcoursBox{
+.parcoursAcademiqueBox{
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-row-gap: 40px;
     align-items: center;
     justify-items: center;
+    margin-top: 120px;
+}
+.parcoursProfessionnelBox{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-top: 120px;
 }
 .parcoursFormation{
@@ -456,21 +463,40 @@ h3{
     flex-direction: column;
     gap: 10px;
 }
+.parcoursFormation:hover{
+    .parcoursTitle{
+        color: white;
+    }
+    .titleEtablisement{
+        color: white;
+    }
+    .parcoursText{
+        color: grey;
+    }
+    .fa-circle{
+        color: grey;
+    }
+}
 .parcoursTitle{
     font-size: 1.3em;
     font-weight: 300;
     color: #636363;
     margin-bottom: 15px;
-
+    transition: color 0.5s ease;
+}
+.fa-circle{
+    transition: color 0.5s ease;
 }
 .parcoursText{
     font-size: 1.3em;
     font-weight: 300;
     margin-bottom: 15px;
+    transition: color 0.5s ease;
 }
 
 .titleEtablisement{
     color: gray;
     font-weight: 400;
     font-size: 1.2em;
+    transition: color 0.5s ease;
 }

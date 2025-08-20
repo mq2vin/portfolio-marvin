@@ -9,7 +9,7 @@ window.addEventListener("scroll", () => {
     const sections = {
         projets: 0,
         about: document.querySelector("#about").offsetTop,
-        parcours: document.querySelector("#parcours").offsetTop,
+        parcours: document.querySelector("#parcours-academique").offsetTop,
         competence: document.querySelector("#skills").offsetTop,
     };
 
@@ -65,7 +65,7 @@ window.addEventListener("scroll", () => {
         }, observerOptions);
 
 
-        const sections = document.querySelectorAll('#about, #parcours, #skills, #frameworks, #os, #IDE');
+        const sections = document.querySelectorAll('#about, #parcours-academique, #skills, #frameworks, #os, #IDE');
         sections.forEach(section => {
             section.classList.add('hidden');
             observer.observe(section);
