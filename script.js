@@ -261,3 +261,36 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+function initEffetGlass() {
+    // Header/Navigation
+    const header = document.querySelector('header');
+    if (header) {
+        header.classList.add('liquid-glass-nav');
+    }
+
+    const parcoursElements = document.querySelectorAll('.parcoursFormation');
+    parcoursElements.forEach(element => {
+        element.classList.add('glass-timeline');
+    });
+
+
+    const modal = document.querySelector('#modal');
+    const modalContent = document.querySelector('#modal-content');
+    if (modal) modal.classList.add('glass-modal');
+    if (modalContent) modalContent.classList.add('glass-content');
+}
+
+
+function init() {
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => {
+            initEffetGlass();
+        });
+    } else {
+        initEffetGlass();
+    }
+}
+
+// Initialisation
+init();
